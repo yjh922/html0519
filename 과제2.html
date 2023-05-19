@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background: beige;
+            border: 1px solid black;
+            position: relative;
+        }
+        #wrapper box{
+            overflow: hidden;
+        }
+        
+            
+    
+    </style>
+    <script>
+        let img;
+        let box;
+        function init(){
+            let wrapper=document.getElementById("wrapper");
+
+        
+            for(let i=1; i<=3; i++){
+                img=document.createElement("img");
+                img.src="../images/card/h"+i+".png"
+                img.style.width=100+"px";
+                img.style.height=100+"px"
+                img.style.position="absolute";
+                img.style.left=(i-1)*100+"px";
+                wrapper.appendChild(img);
+            }
+            for(let i=4; i<=6; i++){
+                img=document.createElement("img");
+                img.src="../images/card/h"+i+".png"
+                img.style.width=100+"px";
+                img.style.height=100+"px"
+                img.style.position="absolute";
+                img.style.left=(i-4)*100+"px";
+                img.style.top=100+"px";
+                wrapper.appendChild(img);
+            }
+            for(let i=7; i<=9; i++){
+                img=document.createElement("img");
+                img.src="../images/card/h"+i+".png"
+                img.style.width=100+"px";
+                img.style.height=100+"px"
+                img.style.position="absolute";
+                img.style.left=(i-7)*100+"px";
+                img.style.top=200+"px";
+                wrapper.appendChild(img);
+            }
+            box=document.createElement(div);
+            box.style.width=100+"px";
+            box.style.height=100+"px";
+            box.style.position="absolute";
+            box.style.background="red";
+            box.style.left=100+"px";
+            box.style.top=100+"px"; 
+            wapper.appendChild(box);
+
+            
+        }
+        addEventListener("load", function(){
+            init();
+            //setInterval("move()", 10);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper"></div>
+</body>
+</html>

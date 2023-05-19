@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            
+            background: red;
+            margin: auto;
+        }
+    </style>
+    <script>
+        let div;
+        let a=0.1;
+        let targerY=40;
+        function move(){
+            div.style.height=parseFloat(div.style.height)+a*(targetY-parseFloat(div.style.height))+"px";
+        }
+        function init(){
+            div=document.querySelector("div");
+            div.style.position="relative";
+            div.style.height=40+"px";
+        }
+        addEventListener("load", function(){
+            init();
+            setInterval("move()", 10);
+            div.addEventListener("mouseover", function(){
+                targetY=400;
+            })
+            div.addEventListener("mouseout", function(){
+                targetY=40;
+            })
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
